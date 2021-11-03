@@ -1,40 +1,40 @@
 /*Positions Array*/
 const positions = [
     {
-      name: 'Select modal positions...',
-      id: 0
+      id: 0,
+      name: 'Select modal positions...'
     },
     {
-      name: 'Top',
-      id: 1
+      id: 1,
+      name: 'Top'
     },
     {
-      name: 'Right',
-      id: 2
+      id: 2,
+      name: 'Right'
     },
     {
-      name: 'Bottom',
-      id: 3
+      id: 3,
+      name: 'Bottom'
     },
     {
-      name: 'Left',
-      id: 4
+      id: 4,
+      name: 'Left'
     },
     {
-      name: 'Top Right',
-      id: 5
+      id: 5,
+      name: 'Top Right'
     },
     {
-      name: 'Bottom Right',
-      id: 6
+      id: 6,
+      name: 'Bottom Right'
     },
     {
-      name: 'Bottom Left',
-      id: 7
+      id: 7,
+      name: 'Bottom Left'
     },
     {
-      name: 'Top Left',
-      id: 8
+      id: 8,
+      name: 'Top Left'
     }
 ];
 
@@ -72,9 +72,9 @@ body.style = `
   background: linear-gradient(to right, #FFD194, #D1913C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   `;
 
+/*Modal creating*/
 let modal = document.createElement('div');
 let createModal = (statusColor) => {
-
   if(statusColor) {
     const modalHeader = document.createElement('div');
     modalHeader.style = `
@@ -141,7 +141,9 @@ statusDropDown.addEventListener('change', event => {
 
   positionsDropDown.removeAttribute('disabled');
 
-  if(!parseInt(statusColor)== 0 || !parseInt(statusColor) == '' || !parseInt(statusColor) == null) {
+  if(!parseInt(statusColor)== 0 ||
+   !parseInt(statusColor) == '' ||
+    !parseInt(statusColor) == null) {
     positionsDropDown.removeAttribute('disabled');
   } else {
     positionsDropDown.setAttribute('disabled', '');
@@ -183,7 +185,7 @@ positionsDropDown.style = `
 /*Fill in Positions Dropdown*/
 positions.forEach(position => {
   const positionOption = document.createElement('option');
-  
+
   positionOption.setAttribute('value', position.id);
   positionOption.innerText = position.name;
 
@@ -194,7 +196,7 @@ positions.forEach(position => {
 document.body.appendChild(statusDropDown);
 document.body.appendChild(positionsDropDown);
 
-
+/*Modal positions*/
 let modalTop = () => {
   createModal();
   statusDropDown.setAttribute('disabled', '');

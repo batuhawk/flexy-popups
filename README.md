@@ -1,9 +1,10 @@
 # Flexy Popups
-
-It's basically my weekend project but my main purpose for this project is to learn Event Listeners, Callback Functions, Scopes again because I believe that some basic things in the future many times evolve to life-saving things for me.
-
+Dynamic popup creator for different website cases and different warning messages.
+## What I Learn
+* Event Listeners
+* Callback Functions
+* Scopes
 ## Project View
-
 > **Select Status**
 ![alt text](https://i.hizliresim.com/7tzhqlp.png)
 
